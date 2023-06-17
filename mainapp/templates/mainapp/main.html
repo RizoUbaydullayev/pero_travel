@@ -1,0 +1,606 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %} 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{% static 'css/main.css'%}">
+{% endblock links %}
+{% block content %}
+<header class="header">
+    <div class="header_wrap container">
+        <div class="header_top">
+            <div class="logo">
+                <a href="#"><img src=" {% static 'img/logo.png' %}" alt="logo"></a>
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="main_header">
+                <div class="main_header-title">
+                    <h2 class="title_top">
+                        ПУТЕШЕСТВУЙ
+                    </h2>
+                    <h2 class="title_middle">
+                        вместе с
+                    </h2>
+                    <h2 class="title_buttom">
+                        PERO TRAVEL
+                    </h2>
+                </div>
+                <div class="to_excursions">
+                    <button class="button_to_excursions">
+                        К экскурсиям
+                    </button>
+                </div>
+            </div>
+            <div class="social_buttons">
+                <a href="#"><img src="{% static '/img/vk_icon.svg' %}" alt=""></a>
+                <a href="#"><img src="{% static '/img/instagram_icon.svg' %}" alt=""></a>
+                <a href="#"><img src="{% static '/img/facebook_icon.svg' %}" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="header_slider">
+            <div class="header_slider_wrap">
+                <div class="page" data-index="1">
+                    <div class="page_content">
+                    </div>
+                </div>
+                <div class="page" data-index="2">
+                    <div class="page_content">
+                        <img class="play_video_icon" src="{% static '/img/play_video_icon.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="page" data-index="1">
+                    <div class="page_content">
+                    </div>
+                </div>
+                <div class="page" data-index="2">
+                    <div class="page_content">
+                        <img class="play_video_icon" src="{% static '/img/play_video_icon.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="page" data-index="1">
+                    <div class="page_content">
+                    </div>
+                </div>
+                <div class="page" data-index="2">
+                    <div class="page_content">
+                        <img class="play_video_icon" src="{% static '/img/play_video_icon.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<section class="popular_excursions">
+    <div class="popular_excursions_wrap container">
+        <div class="popular_excursions_title">
+            Популярные экскурсии
+        </div>
+        <div class="see_all">
+            <a href="#" class="see_all_link">Смотреть все</a>
+        </div>
+    </div>
+    <div class="popular_excursions_slider">
+        <div class="popular_excursions_slider_wrap">
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="page" data-index="1">
+                <div class="page_content">
+                    <div class="type_of_excursion">
+                        Автобусный тур
+                    </div>
+                    <div class="tour_name">
+                        Обзорная по Сочи (из Адлера)
+                    </div>
+                    <div class="duration_and_cost">
+                        <div class="duration">
+                            6 часов
+                        </div>
+                        <div class="cost">
+                            618 ₽
+                        </div>
+                    </div>
+                    <div class="tour_description">
+                        Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                        Экскурсия начнется с подъёма на гору Большой Ахун - это
+                        высшая точка (665 метров) на побережьи Сочи. На вершине
+                        горы Большой Ахун есть смотровая башня, построенная в
+                        1935-36 годах по проекту архитектора С. И. Воробьева...
+                    </div>
+                    <div class="more">
+                        <button class="more_button">
+                            Подробнее
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container_for_arrows">
+            <div class="swiper-button-prev arrow ">
+            </div>
+            <div class="swiper-button-next arrow">
+            </div>
+        </div>
+        <div class="progress_line">
+        </div>
+    </div>
+</section>
+
+<section class="about_us">
+    <div class="about_us_img">
+    </div>
+    <div class="about_us_main">
+        <div class="about_us_main_wrap">
+            <div class="about_us_main-title">
+                О нас
+            </div>
+            <div class="about_us_main-content">
+                <p>
+                    PeroTravel - Первый онлайн-сервис по бронированию экскурсий без очередей и операторов.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip
+                    ex ea commodo consequat.
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                    laudantium, totam
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                    sunt
+                    explicabo.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="types_of_excursions container">
+    <div class="types_of_excursions-title">
+        Виды экскурсий
+    </div>
+    <div class="types_of_excursions-main">
+        <div class="excursion">
+            <div class="excursion_icon">
+                <img src=" {% static '/img/bus_tour_excursion-icon.png' %}" alt="">
+            </div>
+            <div class="excursion_info">
+                <h4 class="name">
+                    Автобусный тур
+                </h4>
+                <p class="description">
+                    Один из самых насыщенных впечатлениями, доступных по цене и популярных видов отдыха. Во время
+                    одной поездки можно посмотреть достопримечательности сразу нескольких городов, причем обойдется
+                    это едва ли не в разы дешевле классического экскурсионного тура с ночевками в отелях.
+                </p>
+            </div>
+        </div>
+        <div class="excursion">
+            <div class="excursion_icon">
+                <img src=" {% static '/img/yachting_excursion-icon.png' %}" alt="">
+            </div>
+            <div class="excursion_info">
+                <h4 class="name">
+                    Яхтинг
+                </h4>
+                <p class="description">
+                    Это то же, что круиз на лайнере или прогулка на пароме, только на яхте больше свободы, размеры
+                    судна в разы меньше, нет назойливой команды, можно самостоятельно почувствовать себя капитаном,
+                    постоять за штурвалом. Именно здесь вы почувствуете величайшие просторы Черногор моря.
+                </p>
+            </div>
+        </div>
+        <div class="excursion">
+            <div class="excursion_icon">
+                <img src=" {% static '/img/jeeping_excursion-icon.png' %}" alt="">
+            </div>
+            <div class="excursion_info">
+                <h4 class="name">
+                    Джиппинг
+                </h4>
+                <p class="description">
+                    Это путешествие на автомобилях высокой проходимости с преодолением естественных препятствий, это
+                    экстремальный вид спорта и отдыха, представляющий собой прохождение туристического маршрута по
+                    бездорожью на автомобилях.
+                </p>
+            </div>
+        </div>
+        <div class="excursion">
+            <div class="excursion_icon">
+                <img src=" {% static '/img/canyoning_excursion-icon.png' %}" alt="">
+            </div>
+            <div class="excursion_info">
+                <h4 class="name">
+                    Каньонинг
+                </h4>
+                <p class="description">
+                    Это экстремально-спортивный вид отдыха, который заключается в преодолении каньонов (обводненных
+                    или нет) при помощи альпинистского и иного снаряжения, а иногда и вброд, но без лодок или иных
+                    плавсредств.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="prompt_and_button">
+        <h3 class="prompt">
+            Выбирайте на нашем сайте экскурсию, которая подходит именно вам и записывайтесь онлайн без очередей,
+            просто и быстро!
+        </h3>
+        <button class="button_to_excursions">
+            К экскурсиям
+        </button>
+    </div>
+</section>
+
+<section class="gallery ">
+    <div class="gallery_top container">
+        <div class="gallery_title">
+            Галерея
+        </div>
+        <div class="gallery_see_all">
+            <a href="">Смотреть все</a>
+        </div>
+    </div>
+    <div class="gallery_images">
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_1.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_2.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_9.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_4.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_5.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_6.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_7.png' %}');"></div>
+        <div class="gallery_image" style="background-image: url('{% static '/img/gallery_img_9.png' %}');"></div>
+    </div>
+    <div class="pop_up_for_gallery ">
+        <div class="pop_up-content">
+            <button class="pop_up-close">
+                <img src="{% static '/img/btn-close-icon.svg' %}" alt="img">
+            </button>
+            <img class="pop_up_img" src="" alt="">
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="reviews_wrap container">
+        <div class="reviews_title">
+            Отзывы
+        </div>
+        <div class="see_all">
+            <a href="#" class="see_all_link">Смотреть все</a>
+        </div>
+    </div>
+    <div class="reviews_slider ">
+        <div class="reviews_slider_wrap">
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="progress_line">
+        </div>
+        <div class="container_for_arrows">
+            <div class="swiper-button-prev arrow ">
+            </div>
+            <div class="swiper-button-next arrow">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="ask_a_question">
+    <div class="ask_a_question_wrap container">
+        <div class="ask_a_question_inner ">
+            <div class="ask_a_question_title">
+                Остались вопросы?
+            </div>
+            <div class="ask_a_question_subtitle">
+                Оставь заявку и мы ответим
+            </div>
+            <form action="#" class="ask_a_question_form">
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Телефон">
+                <input type="text" placeholder="Почта">
+                <button type="submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{% static 'js/main.js'%}"></script>
+{% endblock scripts %}
+

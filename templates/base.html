@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reset.css'%}">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    {% block links %} {% endblock links %}
+    <title> {% block page_title %}{% endblock page_title %} </title>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock content %}
+    <footer class="footer container">
+        <div class="logo_and_menu">
+            <div class="logo">
+                <img src="{% static '/img/logo_color.png'%}" alt="logo">
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="contacts">
+            <div class="contacts_inner_1">
+                <div class="watsapp_number">
+                    <a href="">+7 964 944 18 74</a>
+                </div>
+                <div class="telegram_number">
+                    <a href="">+7 918 919 98 28</a>
+                </div>
+                <div class="telegram_bot">
+                    <a href="">Телеграм-бот PeroTravel</a>
+                </div>
+            </div>
+            <div class="contacts_inner_2">
+                <div class="email">
+                    <a href="">office@perotravel.ru</a>
+                </div>
+                <div class="social_buttons">
+                    <a href="#"><img src="{% static '/img/vk_color_icon.svg' %} " alt=""></a>
+                    <a href="#"><img src="{% static '/img/instagram_color_icon.svg' %} " alt=""></a>
+                    <a href="#"><img src="{% static '/img/facebook_color_icon.svg' %} " alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/base.js'%}"></script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+
+</html>

@@ -1,0 +1,2044 @@
+/*=========================  header  ================================================*/
+.header {
+    position: relative;
+    padding-top: 26px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../img/header_bg.png);
+    backdrop-filter: blur(0.5px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    min-height: 1052px;
+    flex-wrap: wrap;
+    .header_top {
+        display: flex;
+        justify-content: space-between;
+        .menu {
+            color: #fff;
+            font-family: "Montserrat-Medium";
+            font-size: 14px;
+            ul {
+                display: flex;
+                gap: 20px;
+                li {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .main {
+        margin-top: 180px;
+        margin-bottom: 248px;
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        gap: 50px;
+
+        .main_header {
+            .main_header-title {
+                position: relative;
+                .title_top {
+                    color: #fff;
+                    font-size: 72px;
+                    font-family: "Montserrat-Bold";
+                }
+                .title_middle {
+                    transform: translateY(-57%);
+                    position: absolute;
+                    font-size: 64px;
+                    font-family: "Mr_kindlyjasmineg";
+                    text-align: right;
+                    color: #ffc700;
+                }
+                .title_buttom {
+                    font-size: 96px;
+                    font-family: "Montserrat-Black", sans-serif;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 2px #fff;
+                }
+            }
+            .to_excursions {
+                margin-top: 100px;
+                .button_to_excursions {
+                    position: relative;
+                    font-family: "Montserrat-Bold";
+                    font-size: 14px;
+                    height: 50px;
+                    width: 230px;
+                    background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                    border-radius: 60px;
+                    border: none;
+                    color: #fff;
+                    &::after {
+                        top: 50%;
+                        right: 40px;
+                        content: "";
+                        position: absolute;
+                        width: 15px;
+                        height: 8px;
+                        background-image: url(../img/arrow.svg);
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        .social_buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+    .slider {
+        user-select: none;
+        position: absolute;
+        width: 100%;
+        bottom: -100px;
+        .header_slider {
+            overflow: hidden;
+            .header_slider_wrap {
+                display: flex;
+                .page {
+                    flex-shrink: 0;
+                    width: 360px;
+                    height: 227px;
+                    position: relative;
+                    .page_content {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        display: flex;
+                        background-size: cover;
+                        background-image: url("../img/header_slider_img_1.jpg");
+                        .play_video_icon {
+                            cursor: pointer;
+                            position: absolute;
+                            right: 50%;
+                            bottom: 50%;
+                            transform: translate(50%, 50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=========================  popular_excursions  ================================================*/
+
+.popular_excursions {
+    position: relative;
+    margin-top: 263px;
+    .popular_excursions_wrap {
+        margin-bottom: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .popular_excursions_title {
+            font-family: "Montserrat-Bold";
+            font-size: 24px;
+            color: #0499dd;
+        }
+        .see_all {
+            .see_all_link {
+                font-family: "Montserrat-Medium";
+                font-size: 12px;
+                text-decoration-line: underline;
+            }
+        }
+    }
+    .popular_excursions_slider {
+        user-select: none;
+        padding-bottom: 100px;
+        position: relative;
+        overflow: hidden;
+        .popular_excursions_slider_wrap {
+            display: flex;
+            .page {
+                border-radius: 10px;
+                width: 360px;
+                height: 497px;
+                flex-shrink: 0;
+                background-image: url("../img/popular_excursions_slide_1.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                .page_content {
+                    padding: 0 16px 42px 16px;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    color: #fff;
+                    .type_of_excursion {
+                        margin-bottom: 2px;
+                    }
+                    .tour_name {
+                        margin-bottom: 14px;
+                        font-size: 14px;
+                        font-family: "Montserrat-Bold";
+                        color: #ffc700;
+                    }
+                    .duration_and_cost {
+                        margin-bottom: 20px;
+                        display: flex;
+                        gap: 13px;
+                        .duration {
+                            position: relative;
+                            padding-left: 23px;
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                width: 18px;
+                                height: 18px;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background-size: cover;
+                                background-image: url("../img/duration.svg");
+                            }
+                        }
+                        .cost {
+                            position: relative;
+                            padding-left: 27px;
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                width: 22px;
+                                height: 22px;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background-size: cover;
+                                background-image: url("../img/cost_icon.svg");
+                            }
+                        }
+                    }
+                    .tour_description {
+                        margin-bottom: 20px;
+                    }
+                    .more {
+                        .more_button {
+                            position: relative;
+                            font-family: "Montserrat-Bold";
+                            font-size: 14px;
+                            height: 50px;
+                            width: 230px;
+                            background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                            border-radius: 60px;
+                            border: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .container_for_arrows {
+            height: 50px;
+            position: relative;
+            max-width: 1120px;
+            margin: 0 auto;
+            .arrow {
+                top: 250%;
+                transform: translateY(-50%);
+            }
+            .swiper-button-next {
+                left: 80px;
+            }
+        }
+
+        .progress_line {
+            left: 100%;
+            transform: translateX(-100%);
+            width: 70%;
+            position: relative;
+            margin-top: 50px;
+        }
+    }
+}
+
+/*=========================  about_us  ================================================*/
+
+.about_us {
+    margin-top: 60px;
+    position: relative;
+
+    .about_us_img {
+        width: 75%;
+        height: 998px;
+        background-image: url("../img/about_us_bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .about_us_main {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: flex-end;
+
+        .about_us_main_wrap {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+            width: 550px;
+            height: 450px;
+            background-color: rgb(255, 255, 255);
+            padding: 60px 85px;
+            .about_us_main-title {
+                font-size: 24px;
+                font-family: "Montserrat-Bold";
+                color: #0499dd;
+            }
+            .about_us_main-content {
+                font-size: 14px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+/*=========================  types_of_excursions  ================================================*/
+
+.types_of_excursions {
+    margin-top: 150px;
+    .types_of_excursions-title {
+        margin-bottom: 90px;
+        font-family: "Montserrat-Bold";
+        font-size: 24px;
+        color: #0499dd;
+    }
+    .types_of_excursions-main {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 20px;
+        .excursion {
+            width: calc(50% - 10px);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .excursion_icon {
+                flex-shrink: 0;
+            }
+            .excursion_info {
+                .name {
+                    color: #0499dd;
+                    font-family: "Montserrat-Bold";
+                    font-size: 18px;
+                }
+                .description {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+    .prompt_and_button {
+        text-align: center;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .prompt {
+            width: 550px;
+            font-size: 14px;
+        }
+        .button_to_excursions {
+            font-family: "Montserrat-Bold";
+            font-size: 14px;
+            height: 50px;
+            width: 230px;
+            background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+            border-radius: 60px;
+            border: none;
+            color: #fff;
+            margin-top: 20px;
+        }
+    }
+}
+
+/*=========================  gallery  ================================================*/
+@-webkit-keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.gallery {
+    position: relative;
+    margin-top: 150px;
+    .gallery_top {
+        margin-bottom: 90px;
+        display: flex;
+        justify-content: space-between;
+        .gallery_title {
+            font-size: 24px;
+            font-family: "Montserrat-Bold";
+            color: #0499dd;
+        }
+        .gallery_see_all {
+            text-decoration: underline;
+        }
+    }
+    .gallery_images {
+        padding: 0 26px;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+        grid-auto-rows: minmax(180px, auto);
+        grid-auto-flow: dense;
+        grid-gap: 26px;
+
+        .gallery_image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+                -webkit-animation: pulsate-bck 0.5s ease-in-out both;
+                animation: pulsate-bck 0.5s ease-in-out both;
+            }
+            &:nth-child(1) {
+                grid-row: span 2;
+                grid-column: span 3;
+            }
+            &:nth-child(2) {
+                grid-row: span 4;
+                grid-column: span 2;
+            }
+            &:nth-child(3) {
+                grid-row: span 2;
+                grid-column: span 2;
+            }
+            &:nth-child(4) {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+            &:nth-child(5) {
+                grid-row: span 2;
+                grid-column: span 1;
+            }
+            &:nth-child(6) {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+            &:nth-child(7) {
+                grid-row: span 2;
+                grid-column: span 3;
+            }
+            &:nth-child(8) {
+                grid-row: span 1;
+                grid-column: span 2;
+            }
+        }
+    }
+}
+
+.pop_up_for_gallery {
+    padding: 0 12px;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+
+    .pop_up-content {
+        position: relative;
+        .pop_up-close {
+            border-radius: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            top: 5px;
+            right: 5px;
+            position: absolute;
+            padding: 0;
+            border: none;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        img {
+        }
+    }
+}
+
+/*=========================  reviews  ================================================*/
+
+.reviews {
+    margin-top: 149px;
+    .reviews_wrap {
+        // margin-bottom: 128px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .reviews_title {
+            font-family: "Montserrat-Bold";
+            font-size: 24px;
+            color: #0499dd;
+        }
+        .see_all {
+            font-family: "Montserrat-Medium";
+            font-size: 12px;
+            text-decoration-line: underline;
+        }
+    }
+    .reviews_slider {
+        user-select: none;
+        overflow: hidden;
+        .reviews_slider_wrap {
+            padding-bottom: 80px;
+            display: flex;
+            .page {
+                flex-shrink: 0;
+                .page_content {
+                    padding: 38px 0px 38px 0px;
+                    width: 600px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .review_avatar {
+                        width: 245px;
+                        // height: 245px;
+                        flex-shrink: 0;
+                    }
+                    .review_main {
+                        background-position: 80% 100%;
+                        background-repeat: no-repeat;
+                        background-image: url("../img/review_bg.png");
+                        .name_and_age {
+                            font-size: 14px;
+                            font-family: "Montserrat-Bold";
+                        }
+                        .review_text {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            font-family: "Montserrat-Medium";
+                        }
+                    }
+                }
+            }
+        }
+        .container_for_arrows {
+            height: 50px;
+            position: relative;
+            max-width: 1120px;
+            margin: 0 auto;
+            .arrow {
+                top: 20px;
+                transform: translateY(-50%);
+            }
+            .swiper-button-next {
+                left: 80px;
+            }
+        }
+
+        .progress_line {
+            left: 100%;
+            transform: translateX(-100%);
+            width: 72%;
+            position: relative;
+            // margin-top: 50px;
+        }
+    }
+}
+
+/*=========================  ask_a_question  ================================================*/
+
+.ask_a_question {
+    background-image: url("../img/ask_a_question-bg.jpg");
+    .ask_a_question_wrap {
+        display: flex;
+        justify-content: end;
+        .ask_a_question_inner {
+            padding: 140px 100px;
+
+            backdrop-filter: blur(10px);
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            // align-items: end;
+            .ask_a_question_title {
+                font-size: 24px;
+                font-family: "Montserrat-Bold";
+                color: #fff;
+            }
+            .ask_a_question_subtitle {
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                color: #ffc700;
+            }
+            .ask_a_question_form {
+                margin-top: 45px;
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+                input {
+                    user-select: none;
+                    outline: none;
+                    font-size: 12px;
+                    font-family: "Montserrat-Medium";
+                    color: #fff;
+                    border: none;
+                    background: transparent;
+                    border-bottom: 1px solid #fff;
+                    &::-webkit-input-placeholder {
+                        /* WebKit browsers */
+                        color: #fff;
+                    }
+                    &:-moz-placeholder {
+                        /* Mozilla Firefox 4 to 18 */
+                        color: #fff;
+                    }
+                    &::-moz-placeholder {
+                        /* Mozilla Firefox 19+ */
+                        color: #fff;
+                    }
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10+ */
+                        color: #fff;
+                    }
+                    &:focus {
+                        border: none;
+                        border-bottom: 1px solid #ffc700;
+                    }
+                }
+                input:focus {
+                    color: #ffc700;
+                    &::-webkit-input-placeholder {
+                        /* WebKit browsers */
+                        color: #ffc700;
+                    }
+                    &:-moz-placeholder {
+                        /* Mozilla Firefox 4 to 18 */
+                        color: #ffc700;
+                    }
+                    &::-moz-placeholder {
+                        /* Mozilla Firefox 19+ */
+                        color: #ffc700;
+                    }
+                    &:-ms-input-placeholder {
+                        /* Internet Explorer 10+ */
+                        color: #ffc700;
+                    }
+                }
+                button {
+                    font-family: "Montserrat-Bold";
+                    font-size: 14px;
+                    height: 50px;
+                    width: 230px;
+                    background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                    border-radius: 60px;
+                    border: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/*=========================  Адаптив  ================================================*/
+@media screen and (min-width: 1921px) {
+    .header .main .main_header .main_header-title .title_middle {
+        right: 31px;
+    }
+
+    .about_us {
+        .about_us_main {
+            right: 15%;
+        }
+    }
+
+    .popular_excursions {
+        .popular_excursions_slider {
+            .progress_line {
+                width: 65%;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            // padding: 0 26px;
+            // position: relative;
+            // display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+            grid-auto-rows: minmax(250px, auto);
+            // grid-gap: 26px;
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+            }
+            .progress_line {
+                width: 66%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+    .header .main .main_header .main_header-title .title_middle {
+        right: 31px;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1600px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 900px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            gap: 50px;
+
+            .main_header {
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 72px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        right: 31px;
+                        position: absolute;
+                        font-size: 64px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 96px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 2px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 180px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+            grid-auto-rows: minmax(140px, auto);
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                .page {
+                    .page_content {
+                        width: 600px;
+                    }
+                }
+            }
+            .progress_line {
+                width: 77%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 800px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            gap: 50px;
+
+            .main_header {
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 72px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        right: 31px;
+                        position: absolute;
+                        font-size: 64px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 96px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 2px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 180px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .types_of_excursions {
+        margin-top: 150px;
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+            grid-auto-rows: minmax(130px, auto);
+            grid-gap: 10px;
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                .page {
+                    .page_content {
+                        width: 600px;
+                    }
+                }
+            }
+            .progress_line {
+                width: 77%;
+            }
+        }
+    }
+
+    .ask_a_question {
+        .ask_a_question_wrap {
+            .ask_a_question_inner {
+                padding: 100px 60px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 900px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            gap: 50px;
+
+            .main_header {
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 48px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        left: 369px;
+                        // right: 231px;
+                        position: absolute;
+                        font-size: 48px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 96px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 2px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 180px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popular_excursions {
+        .popular_excursions_wrap {
+            .popular_excursions_title {
+            }
+            .see_all {
+            }
+        }
+        .popular_excursions_slider {
+            .popular_excursions_slider_wrap {
+                .page {
+                    // height: 430px;
+                    .page_content {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .types_of_excursions {
+        margin-top: 150px;
+        .types_of_excursions-title {
+        }
+        .types_of_excursions-main {
+            .excursion {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+            grid-auto-rows: minmax(110px, auto);
+            grid-gap: 5px;
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                .page {
+                    .page_content {
+                        width: 600px;
+                    }
+                }
+            }
+            .progress_line {
+                width: 77%;
+            }
+        }
+    }
+
+    .ask_a_question {
+        .ask_a_question_wrap {
+            .ask_a_question_inner {
+                padding: 100px 60px;
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 800px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+            gap: 20px;
+
+            .main_header {
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 36px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        left: 260px;
+                        position: absolute;
+                        font-size: 36px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 56px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 2px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 180px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popular_excursions {
+        .popular_excursions_wrap {
+            .popular_excursions_title {
+            }
+            .see_all {
+            }
+        }
+        .popular_excursions_slider {
+            .popular_excursions_slider_wrap {
+                .page {
+                    // height: 430px;
+                    .page_content {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about_us {
+        .about_us_img {
+            width: 84%;
+            height: 700px;
+        }
+        .about_us_main {
+            .about_us_main_wrap {
+                gap: 20px;
+                width: 380px;
+                height: 386px;
+                padding: 40px 40px;
+                .about_us_main-title {
+                }
+                .about_us_main-content {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .types_of_excursions {
+        margin-top: 150px;
+        .types_of_excursions-title {
+        }
+        .types_of_excursions-main {
+            .excursion {
+                flex-basis: 100%;
+            }
+        }
+        .prompt_and_button {
+            .prompt {
+                width: 400px;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+            grid-auto-rows: minmax(110px, auto);
+            grid-gap: 5px;
+            .gallery_image {
+                &:nth-child(1),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(8) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    grid-row: span 4;
+                    grid-column: span 3;
+                }
+                &:nth-child(3) {
+                    grid-row: span 2;
+                    grid-column: span 3;
+                }
+                &:nth-child(4) {
+                    grid-row: span 2;
+                    grid-column: span 2;
+                }
+                &:nth-child(7) {
+                    grid-row: span 2;
+                    grid-column: span 5;
+                }
+            }
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                padding-bottom: 50px;
+                .page {
+                    .page_content {
+                        width: 100%;
+                        .review_avatar {
+                            width: 190px;
+                        }
+                        .review_main {
+                            background-position: 80% 30%;
+
+                            .review_text {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .progress_line {
+                width: 77%;
+            }
+        }
+    }
+
+    .ask_a_question {
+        .ask_a_question_wrap {
+            .ask_a_question_inner {
+                padding: 100px 30px;
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 800px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            .main_header {
+                flex-basis: 100%;
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 28px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        left: 206px;
+                        position: absolute;
+                        font-size: 28px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 48px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 1px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 150px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popular_excursions {
+        .popular_excursions_wrap {
+            .popular_excursions_title {
+            }
+            .see_all {
+            }
+        }
+        .popular_excursions_slider {
+            .popular_excursions_slider_wrap {
+                .page {
+                    // height: 430px;
+                    .page_content {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+            .progress_line {
+                width: 65%;
+            }
+        }
+    }
+
+    .about_us {
+        .about_us_img {
+            width: 84%;
+            height: 700px;
+        }
+        .about_us_main {
+            .about_us_main_wrap {
+                gap: 20px;
+                width: 300px;
+                height: 350px;
+                padding: 40px 40px;
+                .about_us_main-title {
+                }
+                .about_us_main-content {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .types_of_excursions {
+        margin-top: 150px;
+        .types_of_excursions-title {
+        }
+        .types_of_excursions-main {
+            .excursion {
+                flex-basis: 100%;
+            }
+        }
+        .prompt_and_button {
+            .prompt {
+                width: 300px;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            grid-template-columns: repeat(auto-fill, minmax(11%, 1fr));
+            grid-auto-rows: minmax(90px, auto);
+            grid-gap: 5px;
+            padding: 0 4px;
+            .gallery_image {
+                &:nth-child(1),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(8) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    grid-row: span 4;
+                    grid-column: span 4;
+                }
+                &:nth-child(3) {
+                    grid-row: span 2;
+                    grid-column: span 4;
+                }
+                &:nth-child(4) {
+                    grid-row: span 2;
+                    grid-column: span 4;
+                }
+                &:nth-child(7) {
+                    grid-row: span 2;
+                    grid-column: span 8;
+                }
+            }
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                padding-bottom: 50px;
+                .page {
+                    .page_content {
+                        width: 100%;
+                        flex-direction: column;
+                        align-items: start;
+                        .review_avatar {
+                            width: 150px;
+                        }
+                        .review_main {
+                            background-position: 80% 30%;
+
+                            .review_text {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .container_for_arrows {
+                .swiper-button-next {
+                    left: 45px;
+                }
+            }
+            .progress_line {
+                width: 72%;
+            }
+        }
+    }
+
+    .ask_a_question {
+        .ask_a_question_wrap {
+            justify-content: center;
+            .ask_a_question_inner {
+                align-items: center;
+                justify-content: center;
+                padding: 100px 10px;
+                width: 95%;
+                .ask_a_question_form {
+                    align-items: center;
+                    input {
+                        width: 100%;
+                    }
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding-top: 26px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left top;
+        min-height: 800px;
+        flex-wrap: wrap;
+        .header_top {
+            display: flex;
+            justify-content: space-between;
+            .menu {
+                color: #fff;
+                font-family: "Montserrat-Medium";
+                font-size: 14px;
+                ul {
+                    display: flex;
+                    gap: 10px;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .main {
+            margin-top: 180px;
+            margin-bottom: 248px;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            .main_header {
+                flex-basis: 100%;
+                .main_header-title {
+                    position: relative;
+                    .title_top {
+                        color: #fff;
+                        font-size: 28px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .title_middle {
+                        transform: translateY(-57%);
+                        left: 160px;
+                        position: absolute;
+                        font-size: 28px;
+                        font-family: "Mr_kindlyjasmineg";
+                        text-align: right;
+                        color: #ffc700;
+                    }
+                    .title_buttom {
+                        font-size: 48px;
+                        font-family: "Montserrat-Black", sans-serif;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke: 1px #fff;
+                    }
+                }
+                .to_excursions {
+                    margin-top: 100px;
+                    .button_to_excursions {
+                        position: relative;
+                        font-family: "Montserrat-Bold";
+                        font-size: 14px;
+                        height: 50px;
+                        width: 230px;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 60px;
+                        border: none;
+                        color: #fff;
+                        &::after {
+                            top: 50%;
+                            right: 40px;
+                            content: "";
+                            position: absolute;
+                            width: 15px;
+                            height: 8px;
+                            background-image: url(../img/arrow.svg);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+            .social_buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+        .slider {
+            user-select: none;
+            position: absolute;
+            width: 100%;
+            bottom: -100px;
+            .header_slider {
+                overflow: hidden;
+                .header_slider_wrap {
+                    display: flex;
+                    .page {
+                        flex-shrink: 0;
+                        width: 300px;
+                        height: 150px;
+                        position: relative;
+                        .page_content {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            display: flex;
+                            background-size: cover;
+                            background-image: url("../img/header_slider_img_1.jpg");
+                            .play_video_icon {
+                                cursor: pointer;
+                                position: absolute;
+                                right: 50%;
+                                bottom: 50%;
+                                transform: translate(50%, 50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .popular_excursions {
+        .popular_excursions_wrap {
+            .popular_excursions_title {
+            }
+            .see_all {
+            }
+        }
+        .popular_excursions_slider {
+            .popular_excursions_slider_wrap {
+                .page {
+                    // height: 430px;
+                    .page_content {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        .more {
+                            .more_button {
+                                width: 180px;
+                            }
+                        }
+                    }
+                }
+            }
+            .progress_line {
+                width: 60%;
+            }
+        }
+    }
+
+    .about_us {
+        .about_us_img {
+            width: 84%;
+            height: 600px;
+        }
+        .about_us_main {
+            .about_us_main_wrap {
+                gap: 20px;
+                width: 260px;
+                height: 386px;
+                padding: 30px 20px;
+                .about_us_main-title {
+                }
+                .about_us_main-content {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .types_of_excursions {
+        margin-top: 150px;
+        .types_of_excursions-title {
+        }
+        .types_of_excursions-main {
+            .excursion {
+                flex-basis: 100%;
+            }
+        }
+        .prompt_and_button {
+            .prompt {
+                width: 250px;
+            }
+        }
+    }
+
+    .gallery {
+        .gallery_top {
+        }
+        .gallery_images {
+            padding: 0 4px;
+            grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
+            grid-auto-rows: minmax(90px, auto);
+            grid-gap: 5px;
+            .gallery_image {
+                &:nth-child(1),
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(8) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    grid-row: span 4;
+                    grid-column: span 4;
+                }
+                &:nth-child(3) {
+                    grid-row: span 2;
+                    grid-column: span 4;
+                }
+                &:nth-child(4) {
+                    grid-row: span 2;
+                    grid-column: span 4;
+                }
+                &:nth-child(7) {
+                    grid-row: span 2;
+                    grid-column: span 8;
+                }
+            }
+        }
+    }
+
+    .reviews {
+        .reviews_wrap {
+        }
+        .reviews_slider {
+            .reviews_slider_wrap {
+                padding-bottom: 50px;
+                .page {
+                    .page_content {
+                        width: 100%;
+                        flex-direction: column;
+                        align-items: start;
+                        .review_avatar {
+                            width: 150px;
+                        }
+                        .review_main {
+                            background-position: 80% 30%;
+
+                            .review_text {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .container_for_arrows {
+                .swiper-button-next {
+                    left: 45px;
+                }
+            }
+            .progress_line {
+                width: 72%;
+            }
+        }
+    }
+
+    .ask_a_question {
+        .ask_a_question_wrap {
+            justify-content: center;
+            .ask_a_question_inner {
+                align-items: center;
+                justify-content: center;
+                padding: 100px 5px;
+                width: 98%;
+                .ask_a_question_form {
+                    align-items: center;
+                    input {
+                        width: 100%;
+                    }
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
