@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %} 
+<link rel="stylesheet" href="{% static 'css/air-datepicker.css'%}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<link rel="stylesheet" href="{% static 'css/tour_overview.css'%}">
+{% endblock links %}
+{% block content %}
+<header class="header">
+    <div class="header_wrap container">
+        <div class="header_top">
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_main">
+            <h3 class="header-tour_type">
+                Автобусный тур
+            </h3>
+            <h1 class="header-tour_name">
+                ЗОЛОТОЕ КОЛЬЦО АБХАЗИИ
+                (ИЗ АДЛЕРА)
+            </h1>
+            <div class="header_main-buttons">
+                <a class="to_other_guides" href="#">К другим экскурсиям</a>
+                <form class="add_to_favorites_form" action="#">
+                    <input class="add_to_favorites_input" type="checkbox">
+                    </input>
+                    <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</header>
+<section class="tour_description container">
+    <div class="description">
+        <div class="description_title">
+            Описание экскурсии
+        </div>
+        <div class="description_text">
+            Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет
+            сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей
+            автобусной остановки. Пересечение границы без пересадок.
+        </div>
+    </div>
+    <div class="details">
+        <div class="adult_ticket_price detail">
+            <div class="detail_wrap">
+                <div class="detail_main">
+                    1 618 ₽
+                </div>
+                <span class="detail_label">Взрослый билет</span>
+            </div>
+
+        </div>
+        <div class="child_ticket_price detail">
+            <div class="detail_wrap">
+                <div class="detail_main">
+                    1 412 ₽
+                </div>
+                <span class="detail_label">Детский билет</span>
+            </div>
+        </div>
+        <div class="duration detail">
+            <div class="detail_wrap">
+                <div class="detail_main">
+                    12 часов
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="travel_calendar">
+    <div class="travel_calendar-img">
+        <img src="{% static '/img/travel_calendar-bg.png' %}" alt="travel_calendar-img">
+    </div>
+    <div class="travel_calendar-wrap container">
+        <h3 class="travel_calendar-title">
+            Календарь путешествий
+        </h3>
+        <div id="travel_calendar-calendar" class="travel_calendar-calendar">
+        </div>
+    </div>
+</section>
+<section class="route_description container">
+    <div class="route_description_main">
+        <h3 class="route_description_main-title">
+            Описание маршрута
+        </h3>
+        <div class="route_description_main-details">
+            <div class="detail">Город Гагра, Колоннада, ресторан "Гагрипш", Парк принца Ольденбурского;</div>
+            <div class="detail">Смотровая площадка "Прощай Родина", "Чабгарский" карниз, Подвесной мост через реку
+                "Бзыбь";</div>
+            <div class="detail">Дегустация сыра, меда, вина, чачи (входит в стоимость экскурсии), Голубое Озеро,
+                Юпшарский каньон ("Каменный мешок"), Озеро "Рица", Водопады "Девичьи и мужские слезы".</div>
+            <div class="detail_title">
+                Далее на выбор:
+            </div>
+            <div class="detail">Монастырь "Новый Афон", Новоафонская Пещера, "Рукотворный" водопад, храм "Симона
+                Кананита", Лебединое озеро.</div>
+            <div class="detail">Термальный источник в с. Приморское. </div>
+        </div>
+
+    </div>
+    <div class="route_description_slider">
+        <div class="route_description_slider-wrap">
+            <div class="page" style="background-image: url({% static './img/route_description_slider_bg-1.png'%});">
+                <div class="page_content">
+                    <p class="page_name">Гагра</p>
+                </div>
+            </div>
+            <div class="page" style="background-image: url({% static './img/route_description_slider_bg-2.png'%});">
+                <div class="page_content">
+                    <p class="page_name">Коллонада</p>
+                </div>
+            </div>
+            <div class="page" style="background-image: url({% static './img/route_description_slider_bg-2.png'%});">
+                <div class="page_content">
+                    <p class="page_name">Коллонада</p>
+                </div>
+            </div>
+            <div class="page" style="background-image: url({% static './img/route_description_slider_bg-2.png'%});">
+                <div class="page_content">
+                    <p class="page_name">Коллонада</p>
+                </div>
+            </div>
+            <div class="page" style="background-image: url({% static './img/route_description_slider_bg-2.png'%});">
+                <div class="page_content">
+                    <p class="page_name">Коллонада</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="swiper-button-prev arrow ">
+            </div>
+            <div class="swiper-button-next arrow">
+            </div>
+            <div class="progress_line">
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="additional_costs container">
+    <div class="additional_costs_title">
+        Дополнительные расходы (по желанию)
+    </div>
+    <div class="extras">
+        <div class="extra">
+            <div class="extra_wrap">
+                <div class="extra_main">
+                    200 ₽
+                </div>
+                <span class="extra_label">Дача Сталина</span>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="extra_wrap">
+                <div class="extra_main">
+                    200 ₽
+                </div>
+                <span class="extra_label">Молочный водопад</span>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="extra_wrap">
+                <div class="extra_main">
+                    500 ₽
+                </div>
+                <span class="extra_label">Новоафинская пещера</span>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="extra_wrap">
+                <div class="extra_main">
+                    500 ₽
+                </div>
+                <span class="extra_label">Термальный источник</span>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="extra_wrap">
+                <span class="extra_label">Обед</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="important_information container">
+    <h3 class="important_information_title">
+        Важная информация
+    </h3>
+    <div class="important_information_main">
+        <div class="required_documents">
+            <span class="required_documents_subtitle">
+                При пересечении границы (Россия-Абхазия) при себе иметь:
+            </span>
+            <div class="documents_list">
+                <div class="required_document">
+                    <div class="document_name">
+                        Паспорт гражданина РФ
+                    </div>
+                    <div class="document_descriptin">
+                    </div>
+                </div>
+                <div class="required_document">
+                    <div class="document_name">
+                        Гражданам до 14 лет свидетельство о рождении
+                    </div>
+                    <div class="document_descriptin">
+                        Несовершеннолетние дети пересекают границу в сопровождении родителей, в сопровождении
+                        законного
+                        представителя (нотариально заверенная доверенность с указанием страны вывоза ребенка).
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notes">
+            <div class="note">
+                Иностранным гражданам въезд в Абхазию ограничен, кроме граждан Украины, республик ДНР и ЛНР.
+            </div>
+            <div class="note">
+                При возвращении из Абхазии в Россию сдавать ПЦР-тест не нужно, на карантин помещать не будут
+                (Постановление Правительства РФ 1996-Р от 01.08.2020).
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery ">
+    <div class="gallery_top container">
+        <div class="gallery_title">
+            Галерея тура
+        </div>
+        <div class="gallery_see_all">
+            <a href="">Смотреть все</a>
+        </div>
+    </div>
+    <div class="gallery_images">
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_1.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_2.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_9.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_4.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_5.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_6.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_7.png' %});"></div>
+        <div class="gallery_image" style="background-image: url({% static '/img/gallery_img_9.png' %});"></div>
+    </div>
+    <div class="pop_up_for_gallery ">
+        <div class="pop_up-content">
+            <button class="pop_up-close">
+                <img src=" {% static '/img/btn-close-icon.svg'%}" alt="">
+            </button>
+            <img class="pop_up_img" src="" alt="">
+        </div>
+    </div>
+</section>
+<section class="reviews">
+    <div class="reviews_wrap container">
+        <div class="reviews_title">
+            Отзывы
+        </div>
+        <div class="see_all">
+            <a href="#" class="see_all_link">Смотреть все</a>
+        </div>
+    </div>
+    <div class="reviews_slider ">
+        <div class="reviews_slider_wrap">
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <div class="page_content">
+                    <div class="review_avatar">
+                        <img src="{% static '/img/review_avatar_1.png' %}" alt="">
+                    </div>
+                    <div class="review_main">
+                        <div class="name_and_age">
+                            Иван Иванов, 25 лет
+                        </div>
+                        <p class="review_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress_line">
+        </div>
+        <div class="container_for_arrows">
+            <div class="swiper-button-prev arrow ">
+            </div>
+            <div class="swiper-button-next arrow">
+            </div>
+        </div>
+    </div>
+</section>     
+<section class="book_tour">
+    <div class="book_tour_img">
+        <img src="{% static '/img/book_tour-img.png' %}" alt="book_tour-img">
+    </div>
+    <div class="book_tour_main container">
+        <div class="book_tour_main-wrap">
+            <h3 class="book_tour_title">
+                Забронировать тур
+            </h3>
+            <form action="#" class="book_tour-form">
+                <div class="date form_el">
+                    <input class="date-input" type="text" placeholder="04.04.2023">
+                </div>
+                <div class="adults form_el">
+                    <input class="adults-input" type="number" placeholder="5 взрослых">
+                </div>
+                <div class="children form_el">
+                    <input class="children-input" type="number" placeholder="Количество детей">
+                </div>
+                <div class="email form_el">
+                    <input class="email-input" type="email" placeholder="Ваш email">
+                </div>
+                <div class="book_tour_buttons">
+                    <button class="button_book_tour" type="submit">Забронировать</button>
+                    <div class="add_to_favorites">
+                        <input class="add_to_favorites_input" type="checkbox">
+                        </input>
+                        <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% comment %} {% for item in objects %}
+<div class="">{{item.name}}</div>
+<div class="">{{item.type}}</div>
+<div class="">{{item.description}}</div>
+<div class="">{{item.main_image}}</div>
+<div class="">{{item.adult_ticket}}</div>
+<div class="">{{item.pk}}</div>
+{% endfor %}
+{% for item in tour_dates %}
+<div class="">{{item.tour}}</div>
+<div class="">{{item.date}}</div>
+
+{% endfor %} {% endcomment %}
+
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/air-datepicker.js'%}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="{% static 'js/tour_overview.js'%}"></script>
+{% endblock scripts %}
+

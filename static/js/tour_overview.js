@@ -73,7 +73,7 @@ document.addEventListener("click", event => {
 		src_for_popup = window.getComputedStyle(event.target).backgroundImage;
 		pop_up_for_gallery.style.cssText = "display: flex;";
 		gallery_images.style.cssText = "opacity: 0.3;";
-		pop_up_img.setAttribute("src", `./${src_for_popup.slice(src_for_popup.indexOf("img"), -2)}`);
+		pop_up_img.setAttribute("src", `/static/${src_for_popup.slice(src_for_popup.indexOf("img"), -2)}`);
 	}
 })
 

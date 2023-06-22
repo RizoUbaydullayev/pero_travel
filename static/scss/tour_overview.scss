@@ -1,53 +1,3 @@
-/*=========================  Шрифты  ================================================*/
-@font-face {
-    font-family: "Mr_kindlyjasmineg";
-    src: url("../fonts/mr_kindlyjasmineg.woff2") format("woff2"), url("../fonts/mr_kindlyjasmineg.woff") format("woff");
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "Montserrat-Black";
-    src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
-    src: url("../fonts/Montserrat-Black.ttf") format("TrueType");
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat-Bold";
-    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat-Medium";
-    src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-/*=========================  Базовые настройки  ================================================*/
-
-body {
-    font-family: "Montserrat-Medium";
-    font-size: 12px;
-}
-
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 160px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
 /*=========================  header  ================================================*/
 
 .header {
@@ -929,118 +879,9 @@ a {
     width: 360px;
 }
 
-/*=========================  footer  ================================================*/
-
-.footer {
-    font-family: "Montserrat-Medium";
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .logo_and_menu {
-        align-items: center;
-        display: flex;
-        gap: 110px;
-        .menu {
-            .menu_list {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-            }
-        }
-    }
-    .contacts {
-        display: flex;
-        gap: 110px;
-        .contacts_inner_1 {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            .watsapp_number {
-                padding-left: 28px;
-                position: relative;
-                a {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 19px;
-                        height: 19px;
-                        background-image: url("../img/watsapp_icon.svg");
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0px;
-                    }
-                }
-            }
-            .telegram_number {
-                padding-left: 28px;
-                position: relative;
-                a {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 19px;
-                        height: 19px;
-                        background-image: url("../img/tg_icon.svg");
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0px;
-                    }
-                }
-            }
-            .telegram_bot {
-                padding-left: 28px;
-                position: relative;
-                a {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 19px;
-                        height: 19px;
-                        background-image: url("../img/tg_icon.svg");
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0px;
-                    }
-                }
-            }
-        }
-        .contacts_inner_2 {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            .email {
-                padding-left: 28px;
-                position: relative;
-                a {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        width: 19px;
-                        height: 19px;
-                        background-image: url("../img/mail_icon.svg");
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0px;
-                    }
-                }
-            }
-            .social_buttons {
-                display: flex;
-                gap: 9px;
-                align-items: center;
-            }
-        }
-    }
-}
-
 /*=========================  Адаптив  ================================================*/
 
 @media screen and (min-width: 1921px) {
-    .container {
-        padding: 0 10px;
-    }
     .reviews {
         .reviews_wrap {
         }
@@ -1055,15 +896,9 @@ a {
 }
 
 @media screen and (min-width: 1601px) and (max-width: 1920px) {
-    .container {
-        padding: 0 60px;
-    }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1600px) {
-    .container {
-        padding: 0 60px;
-    }
     .gallery {
         .gallery_top {
         }
@@ -1091,9 +926,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .container {
-        padding: 0 40px;
-    }
     .tour_description {
         justify-content: center;
         gap: 60px;
@@ -1144,9 +976,6 @@ a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .container {
-        padding: 0 20px;
-    }
     .header {
         .header_wrap {
             .header_main {
@@ -1243,9 +1072,6 @@ a {
 }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
-    .container {
-        padding: 0 10px;
-    }
     .header {
         .header_wrap {
             .header_main {
@@ -1390,29 +1216,9 @@ a {
             }
         }
     }
-    .footer {
-        gap: 20px;
-        .logo_and_menu {
-            gap: 20px;
-            width: 100%;
-            .logo {
-                width: 50%;
-            }
-        }
-        .contacts {
-            gap: 20px;
-            width: 100%;
-            .contacts_inner_1 {
-                width: 50%;
-            }
-        }
-    }
 }
 
 @media screen and (min-width: 321px) and (max-width: 480px) {
-    .container {
-        padding: 0 5px;
-    }
     .header {
         .header_wrap {
             .header_top {
@@ -1642,46 +1448,9 @@ a {
     .book_tour-date_input { // всплывающий календар в форме
         width: 280px;
     }
-    .footer {
-        gap: 20px;
-        .logo_and_menu {
-            flex-wrap: wrap;
-            gap: 40px;
-            width: 100%;
-            .logo {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            .menu {
-                text-align: center;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-        }
-        .contacts {
-            flex-wrap: wrap;
-            gap: 40px;
-            width: 100%;
-            .contacts_inner_1 {
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-            .contacts_inner_2 {
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-        }
-    }
 }
 
 @media screen and (max-width: 320px) {
-    .container {
-        padding: 0 5px;
-    }
     .header {
         .header_wrap {
             .header_top {
@@ -1912,39 +1681,5 @@ a {
     }
     .book_tour-date_input { // всплывающий календар в форме
         width: 260px;
-    }
-    .footer {
-        gap: 20px;
-        .logo_and_menu {
-            flex-wrap: wrap;
-            gap: 40px;
-            width: 100%;
-            .logo {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            .menu {
-                text-align: center;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-        }
-        .contacts {
-            flex-wrap: wrap;
-            gap: 40px;
-            width: 100%;
-            .contacts_inner_1 {
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-            .contacts_inner_2 {
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-        }
     }
 }

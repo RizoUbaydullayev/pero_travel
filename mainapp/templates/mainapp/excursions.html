@@ -1,0 +1,364 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %} 
+<link rel="stylesheet" href="{% static 'css/air-datepicker.css'%}">
+<link rel="stylesheet" href="{% static 'css/excursions.css'%}">
+{% endblock links %}
+{% block content %}
+<header class="header">
+    <div class="header_wrap container">
+        <div class="header_top">
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="main_header">
+                НАШИ ЭКСКУРСИИ
+            </div>
+        </div>
+    </div>
+</header>
+<section class="types_of_excursions-tabs">
+    <nav class="tabs">
+        <ul class="tabs_list">
+            <li class="tabs_list-item ">
+                <a href="/bus_tour.html" class="tabs_list-link">АВТОБУСНЫЙ ТУР</a>
+            </li>
+            <li class="tabs_list-item">
+                <a href="/jeeping.html" class="tabs_list-link">ДЖИППИНГ</a>
+            </li>
+            <li class="tabs_list-item">
+                <a href="/yachting.html" class="tabs_list-link">ЯХТИНГ</a>
+            </li>
+            <li class="tabs_list-item">
+                <a href="/canyoning.html" class="tabs_list-link">КАНЬОНИНГ</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+<section class="small_filter container">
+    <form action="#" class="small_filter-form">
+        <div class="place filter_element">
+            <input class="place-input" type="text" placeholder="Абхазия">
+        </div>
+        <div class="date filter_element">
+            <input class="date-input" type="text" placeholder="04.04.2023">
+        </div>
+        <div class="people filter_element">
+            <input class="people-input" type="number" placeholder="5 человек">
+        </div>
+        <button class="button_show filter_element" type="submit">Показать</button>
+    </form>
+</section>
+<section class="excursion_main container">
+    <div class="big_filter">
+        <div class="big_filter-header">
+            Фильтры
+        </div>
+        <form class="big_filter-form" action="#">
+            <div class="price filter_element">
+                <div class="element_header">
+                    Стоимость
+                </div>
+                <div class="element_value">
+                    <div class="fields_for_price">
+                        <input class="initial_value" type="number" placeholder="1600">
+                        <input class="final_value" type="number" placeholder="17000">
+                    </div>
+                </div>
+            </div>
+            <div class="number_persons filter_element">
+                <div class="element_header">
+                    Количество человек
+                </div>
+                <div class="element_value">
+                    <div class="fields_for_number_persons">
+                        <input id="person_1" class="person_1" type="checkbox">
+                        <label for="person_1">1 чел.</label>
+                        <input id="person_2" class="person_2" type="checkbox">
+                        <label for="person_2">2 чел.</label>
+                        <input id="person_3" class="person_3" type="checkbox">
+                        <label for="person_3">3 чел.</label>
+                        <input id="person_4" class="person_4" type="checkbox">
+                        <label for="person_4">4 чел.</label>
+                        <input id="person_5" class="person_5" type="checkbox">
+                        <label for="person_5">5 чел.</label>
+                        <input id="person_6" class="person_6" type="checkbox">
+                        <label for="person_6">6 чел.</label>
+                        <input id="person_7" class="person_7" type="checkbox">
+                        <label for="person_7">7 чел.</label>
+                        <input id="person_8" class="person_8" type="checkbox">
+                        <label for="person_8">8 чел.</label>
+                        <input id="person_9" class="person_9" type="checkbox">
+                        <label for="person_9">9 чел.</label>
+                        <input id="person_10" class="person_10" type="checkbox">
+                        <label for="person_10">10 чел.</label>
+                        <input id="person_11" class="person_11" type="checkbox">
+                        <label for="person_11">Больше 10 чел.</label>
+                    </div>
+                </div>
+            </div>
+            <div class="place filter_element">
+                <div class="element_header">
+                    Место
+                </div>
+                <div class="element_value">
+                    <div class="place-inner">
+                        <div class="place_checkbox place_checkbox_1">
+                            <input type="checkbox" id="place_checkbox_1">
+                            <label for="place_checkbox_1">Абхазия</label>
+                        </div>
+                        <div class="place_checkbox place_checkbox_2">
+                            <input type="checkbox" id="place_checkbox_2">
+                            <label for="place_checkbox_2">Красная поляна</label>
+                        </div>
+                        <div class="place_checkbox place_checkbox_3">
+                            <input type="checkbox" id="place_checkbox_3">
+                            <label for="place_checkbox_3">Сочи</label>
+                        </div>
+                        <div class="place_checkbox place_checkbox_4">
+                            <input type="checkbox" id="place_checkbox_4">
+                            <label for="place_checkbox_4">Адлер</label>
+                        </div>
+                        <div class="place_checkbox place_checkbox_5">
+                            <input type="checkbox" id="place_checkbox_5">
+                            <label for="place_checkbox_5">Адлер</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="duration filter_element">
+                <div class="element_header">
+                    Длительность
+                </div>
+                <div class="element_value">
+                    <div class="duration_radio">
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_1">
+                            <label class="radio_label" for="radio_1">Меньше часа</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_2">
+                            <label class="radio_label" for="radio_2">1 час</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_3">
+                            <label class="radio_label" for="radio_3">1,5 часа</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_4">
+                            <label class="radio_label" for="radio_4">2 часа</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_5">
+                            <label class="radio_label" for="radio_5">2,5 часа</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_6">
+                            <label class="radio_label" for="radio_6">3 часа</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" name="duration" id="radio_7">
+                            <label class="radio_label" for="radio_7">Больше 3 часа</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="big_filter_data filter_element">
+                <div class="element_header">
+                    Дата
+                </div>
+                <div class="element_value">
+                    <div class="big_filter_data-inner">
+                        <input placeholder="05.04.2023" class="big_filter_data_value" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="form_buttons">
+                <button class="button_apply_filter" type="submit">Показать</button>
+                <button class="reset_filter" type="reset">Сбросить фильтры</button>
+            </div>
+        </form>
+    </div>
+    <div class="our_tours">
+        <h3 class="our_tours-header">
+            Наши туры
+        </h3>
+        <div class="tour_cards">
+            <div class="tour_card">
+                <div class="tour-img">
+                    <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
+                </div>
+                <div class="tour_card-inner">
+                    <h4 class="name">
+                        <p class="type">
+                            Автобусный тур
+                        </p>
+                        Золотое кольцо Абхазии (из Адлера)
+                    </h4>
+                    <div class="tour-info">
+                        <div class="price-adult_ticket">
+                            1 618 ₽
+                            <p>Взрослый билет</p>
+                        </div>
+                        <div class="price-child_ticket">
+                            1 412 ₽
+                            <p>Детский билет</p>
+                        </div>
+                        <div class="duration">
+                            2,5 часа
+                        </div>
+                    </div>
+                    <div class="description">
+                        Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
+                        маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
+                        вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
+                    </div>
+                    <div class="tour_bottons">
+                        <a href="#" class="tour_more">Подробнее</a>
+                        <form class="add_to_favorites_form" action="#">
+                            <input id="add_to_favorites" type="checkbox">
+                            </input>
+                            <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tour_card">
+                <div class="tour-img">
+                    <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
+                </div>
+                <div class="tour_card-inner">
+                    <h4 class="name">
+                        <p class="type">
+                            Автобусный тур
+                        </p>
+                        Золотое кольцо Абхазии (из Адлера)
+                    </h4>
+                    <div class="tour-info">
+                        <div class="price-adult_ticket">
+                            1 618 ₽
+                            <p>Взрослый билет</p>
+                        </div>
+                        <div class="price-child_ticket">
+                            1 412 ₽
+                            <p>Детский билет</p>
+                        </div>
+                        <div class="duration">
+                            2,5 часа
+                        </div>
+                    </div>
+                    <div class="description">
+                        Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
+                        маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
+                        вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
+                    </div>
+                    <div class="tour_bottons">
+                        <a href="#" class="tour_more">Подробнее</a>
+                        <form class="add_to_favorites_form" action="#">
+                            <input id="add_to_favorites" type="checkbox">
+                            </input>
+                            <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tour_card">
+                <div class="tour-img">
+                    <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
+                </div>
+                <div class="tour_card-inner">
+                    <h4 class="name">
+                        <p class="type">
+                            Автобусный тур
+                        </p>
+                        Золотое кольцо Абхазии (из Адлера)
+                    </h4>
+                    <div class="tour-info">
+                        <div class="price-adult_ticket">
+                            1 618 ₽
+                            <p>Взрослый билет</p>
+                        </div>
+                        <div class="price-child_ticket">
+                            1 412 ₽
+                            <p>Детский билет</p>
+                        </div>
+                        <div class="duration">
+                            2,5 часа
+                        </div>
+                    </div>
+                    <div class="description">
+                        Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
+                        маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
+                        вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
+                    </div>
+                    <div class="tour_bottons">
+                        <a href="#" class="tour_more">Подробнее</a>
+                        <form class="add_to_favorites_form" action="#">
+                            <input id="add_to_favorites" type="checkbox">
+                            </input>
+                            <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tour_card">
+                <div class="tour-img">
+                    <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
+                </div>
+                <div class="tour_card-inner">
+                    <h4 class="name">
+                        <p class="type">
+                            Автобусный тур
+                        </p>
+                        Золотое кольцо Абхазии (из Адлера)
+                    </h4>
+                    <div class="tour-info">
+                        <div class="price-adult_ticket">
+                            1 618 ₽
+                            <p>Взрослый билет</p>
+                        </div>
+                        <div class="price-child_ticket">
+                            1 412 ₽
+                            <p>Детский билет</p>
+                        </div>
+                        <div class="duration">
+                            2,5 часа
+                        </div>
+                    </div>
+                    <div class="description">
+                        Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
+                        маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
+                        вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
+                    </div>
+                    <div class="tour_bottons">
+                        <a href="#" class="tour_more">Подробнее</a>
+                        <form class="add_to_favorites_form" action="#">
+                            <input id="add_to_favorites" type="checkbox">
+                            </input>
+                            <label class="add_to_favorites_label" for="add_to_favorites"></label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+{% block scripts %}
+<script src="{% static 'js/air-datepicker.js'%}"></script>
+<script src="{% static 'js/excursions.js'%}"></script>
+{% endblock scripts %}
+

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block links %} 
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+{% endblock links %}
+{% block content %}
+<header class="header">
+    <div class="header_wrap container">
+        <div class="header_top">
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+            </div>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
+                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="main_header">
+                Войти
+            </div>
+        </div>
+    </div>
+</header>
+<section class="login container">
+    <form class="login_form" action="">
+        <div class="username form_el">
+            <input required class="username-input" type="text" placeholder="Имя пользователья">
+        </div>
+        <div class="password form_el">
+            <input required class="password-input" type="password" placeholder="Пароль">
+            <a class="forgot_password" href="">Забыли пароль?</a>
+        </div>
+        <button class="login_btn" type="submit">Войти</button>
+    </form>
+    <div class="registration_link">
+        <span>Вы у нас впервые?</span>
+        <a href="">Регистрация</a>
+    </div>
+</section>
+{% endblock content %}
+{% block scripts %}
+{% endblock scripts %}
+
