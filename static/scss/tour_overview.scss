@@ -934,7 +934,7 @@
         }
     }
     .route_description {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 10px;
         .route_description_main {
             width: 400px;

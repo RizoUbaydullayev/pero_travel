@@ -948,7 +948,7 @@
     width: 100%;
   }
   .route_description {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
   }
   .route_description .route_description_main {
