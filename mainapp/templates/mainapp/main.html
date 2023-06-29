@@ -15,7 +15,12 @@
                 <ul class="menu_list">
                     <li class="menu_list-item"><a href="{% url 'mainapp:main_page' %}" class="menu_list-link">Главная</a></li>
                     <li class="menu_list-item"><a href="{% url 'mainapp:excursions_page' %}" class="menu_list-link">Экскурсии</a></li>
-                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="menu_list-item"><a href="{% url 'mainapp:excursions_page' %}" class="menu_list-link">Личный кабинет</a></li>
+                        <li class="menu_list-item"><a href="{% url 'authapp:logout' %}" class="menu_list-link">Выйти</a></li>
+                    {% else %}
+                        <li class="menu_list-item"><a href="{% url 'authapp:login' %}" class="menu_list-link">Личный кабинет</a></li>
+                    {% endif %} 
                 </ul>
             </nav>
         </div>
@@ -42,6 +47,7 @@
                 <a href="#"><img src="{% static '/img/vk_icon.svg' %}" alt=""></a>
                 <a href="#"><img src="{% static '/img/instagram_icon.svg' %}" alt=""></a>
                 <a href="#"><img src="{% static '/img/facebook_icon.svg' %}" alt=""></a>
+
             </div>
         </div>
     </div>
