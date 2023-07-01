@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from django.contrib.auth import get_user_model
-from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib import messages
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from django.utils.safestring import mark_safe
@@ -11,6 +12,7 @@ from . import forms
 
 
 class RegisterView(CreateView):
+    template_name = 'registration/registration.html'
     model = get_user_model()
     form_class = forms.CustomUserCreationForm
     success_url = reverse_lazy('mainapp:main_page')
@@ -39,3 +41,15 @@ class CustomLoginView(LoginView):
 
 class CustomLogoutView(LogoutView):
     pass
+
+
+class ProfileEditView(UserPassesTestMixin, UpdateView):
+    template_name = 'registration/profile_edit.html'
+    model = get_user_model()
+    form_class = forms.CustomUserChangeForm
+    
+    def test_func(self):
+        return True if self.request.user.pk == self.kwargs.get("pk") else False
+
+    def get_success_url(self):
+        return reverse_lazy("mainapp:personal_account_page")

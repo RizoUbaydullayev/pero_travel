@@ -9,13 +9,18 @@
     <div class="header_wrap container">
         <div class="header_top">
             <div class="logo">
-                <a href="#"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
+                <a href="{% url 'mainapp:main_page' %}"><img src="{% static 'img/logo.png' %}" alt="logo"></a>
             </div>
             <nav class="menu">
                 <ul class="menu_list">
-                    <li class="menu_list-item"><a href="#" class="menu_list-link">Главная</a></li>
-                    <li class="menu_list-item"><a href="#" class="menu_list-link">Экскурсии</a></li>
-                    <li class="menu_list-item"><a href="#" class="menu_list-link">Личный кабинет</a></li>
+                    <li class="menu_list-item"><a href="{% url 'mainapp:main_page' %}" class="menu_list-link">Главная</a></li>
+                    <li class="menu_list-item"><a href="{% url 'mainapp:excursions_page' %}" class="menu_list-link">Экскурсии</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="menu_list-item"><a href="{% url 'mainapp:personal_account_page' %}" class="menu_list-link">Личный кабинет</a></li>
+                    <li class="menu_list-item"><a href="{% url 'authapp:logout' %}" class="menu_list-link">Выйти</a></li>
+                    {% else %}
+                    <li class="menu_list-item"><a href="{% url 'authapp:login' %}" class="menu_list-link">Личный кабинет</a></li>
+                    {% endif %} 
                 </ul>
             </nav>
         </div>

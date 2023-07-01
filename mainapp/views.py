@@ -19,9 +19,6 @@ class TourOverviewPageView(TemplateView):
         return context
 
 
-class LoginPageView(TemplateView):
-    template_name = 'mainapp/login.html'
-
-
-class RegistrationPageView(TemplateView):
-    template_name = 'mainapp/registration.html'
+class PersonalAccountPageView(TemplateView):
+    template_name = 'mainapp/personal_account.html'
+ 

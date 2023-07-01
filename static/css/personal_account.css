@@ -32,68 +32,7 @@
   color: #fff;
 }
 
-/*=========================  login  ================================================*/
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.login .login_form {
-  margin: 50px 0 10px 0;
-  width: 380px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.login .login_form p {
-  position: relative;
-  font-size: 14px;
-  font-family: "Montserrat-Medium", sans-serif;
-}
-
-.login .login_form p input {
-  border: none;
-  padding: 17px 55px 17px 25px;
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
-}
-
-.login .login_form p input:focus, .login .login_form p input:active {
-  outline: none;
-  box-shadow: 0px 6px 23px 8px rgba(0, 0, 0, 0.2);
-}
-
-.login .login_form p a {
-  float: right;
-  color: #0499DD;
-}
-
-.login .login_form .login_btn {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
-  border-radius: 60px;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  font-family: "Montserrat-Bold", sans-serif;
-}
-
-.login .registration_link {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 14px;
-}
-
-.login .registration_link a {
-  color: #0499DD;
-}
-
-/*=========================  адаптив  ================================================*/
+/*=========================  Адаптив  ================================================*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header .header_wrap .main .main_header {
     font-size: 48px;
@@ -117,9 +56,6 @@
   .header .header_wrap .main .main_header {
     font-size: 36px;
   }
-  .login .login_form {
-    width: 300px;
-  }
 }
 
 @media screen and (max-width: 320px) {
@@ -133,8 +69,5 @@
   .header .header_wrap .main .main_header {
     font-size: 36px;
   }
-  .login .login_form {
-    width: 100%;
-  }
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=personal_account.css.map */

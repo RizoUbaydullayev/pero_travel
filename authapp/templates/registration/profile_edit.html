@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block links %} 
-<link rel="stylesheet" href="{% static 'css/registration.css'%}">
+<link rel="stylesheet" href="{% static 'css/personal_account.css'%}">
 {% endblock links %}
 {% block content %}
 <header class="header">
@@ -25,23 +25,28 @@
         </div>
         <div class="main">
             <div class="main_header">
-                Регистрация
+                Личный кабинет
             </div>
         </div>
     </div>
 </header>
-<section class="registration container">
-    <form class="registration_form" action="" method="post">
-        {% include 'authapp/customuser_form.html' %}
-        <button class="registration_btn" type="submit">Зарегистрироваться</button>
-    </form>
-    
-    <div class="login_link">
-        <span>Вы уже авторизованы?</span>
-        <a href="{% url 'authapp:login' %}">Войти</a>
-    </div>
+<section class="main container">
+        <nav class="tabs">
+            <ul class="tab_list">
+                <li class="tab active"><a href="#" class="tab-link">Профиль</a></li>
+                <li class="tab"><a href="#" class="tab-link">Избранное</a></li>
+                <li class="tab"><a href="#" class="tab-link">Мои бронирования</a></li>
+            </ul>
+        </nav>
+        <div class="main_content">
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="login_btn" type="submit">Сохранить</button>
+            </form>
+            <a href="{% url 'mainapp:personal_account_page' %}">Отмена</a>
+        </div>
 </section>
 {% endblock content %}
 {% block scripts %}
 {% endblock scripts %}
-

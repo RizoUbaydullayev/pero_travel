@@ -1,8 +1,10 @@
 
+import os
 from django.contrib.auth.forms import UserCreationForm, UsernameField, AuthenticationForm
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from django import forms
+
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -69,3 +71,35 @@ class CustomUserLoginForm(AuthenticationForm):
         ),
         "inactive": _("This account is inactive."),
     }
+
+
+class CustomUserChangeForm(forms.ModelForm):
+    username = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': _('Имя пользователя *')})
+    )
+    email = forms.CharField(
+        label='',
+        widget=forms.EmailInput(attrs={'placeholder': _('Электронная почта *')})
+    )
+    first_name = forms.CharField(
+        required=False,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': _('Имя')})
+    )
+    last_name = forms.CharField(
+        required=False,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': _('Фамилия')})
+    )
+    class Meta:
+        model = get_user_model()
+        fields = (
+            "username",
+            "email",
+            "first_name",
+            "last_name",
+        )
+        field_classes = {"username": UsernameField}
+
+
