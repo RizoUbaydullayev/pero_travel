@@ -1,4 +1,11 @@
 {% extends 'mainapp/personal_account_base.html' %}
 {% load static %}
 
+{% block main_content %}
+    <p><input type="text" name="username" readonly placeholder="{{user.username}}" id="id_username"></p>
+    <p><input type="email" name="email" readonly placeholder="{{user.email}}" id="id_email"></p>
+    <p><input type="text" name="first_name" readonly placeholder="{{user.first_name}}" id="id_first_name"></p>
+    <p><input type="text" name="last_name" readonly placeholder="{{user.last_name}}" id="id_last_name"></p>
+    <a href="{% url 'authapp:profile_edit' pk=request.user.pk %}">Редактировать</a>
+{% endblock main_content %}
 
