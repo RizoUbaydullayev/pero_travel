@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*=========================  header  ================================================*/
+.header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../img/excursions-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 289px;
+}
+
+.header .header_wrap .header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header_wrap .header_top .menu .menu_list {
+  font-family: "Montserrat-Medium";
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+  color: #fff;
+}
+
+.header .header_wrap .main {
+  margin-top: 60px;
+}
+
+.header .header_wrap .main .main_header {
+  font-size: 72px;
+  font-family: "Montserrat-Bold";
+  color: #fff;
+}
+
+.main {
+  margin: 50px auto;
+  font-size: 14px;
+  font-family: "Montserrat-Medium", sans-serif;
+  display: flex;
+  gap: 60px;
+}
+
+.main .tabs {
+  margin-top: 17px;
+}
+
+.main .tabs .tab_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main .tabs .tab_list .active {
+  color: #0499dd;
+}
+
+.main .main_content {
+  font-size: 14px;
+  font-family: "Montserrat-Medium", sans-serif;
+}
+
+/*=========================  Адаптив  ================================================*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header .header_wrap .main .main_header {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .header .header_wrap .main .main_header {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  .header .header_wrap .header_top .menu {
+    text-align: right;
+  }
+  .header .header_wrap .header_top .menu .menu_list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .header .header_wrap .main .main_header {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header .header_wrap .header_top .menu {
+    text-align: right;
+  }
+  .header .header_wrap .header_top .menu .menu_list {
+    flex-direction: column;
+    gap: 0;
+  }
+  .header .header_wrap .main .main_header {
+    font-size: 36px;
+  }
+}
+/*# sourceMappingURL=personal_account_base.css.map */

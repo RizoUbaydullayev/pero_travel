@@ -1,5 +1,15 @@
 {% extends 'mainapp/personal_account_base.html' %}
 {% load static %}
+{% block links %} 
+<link rel="stylesheet" href="{% static 'css/personal_account_base.css'%}">
+<link rel="stylesheet" href="{% static 'css/personal_account.css'%}">
+{% endblock links %}
+
+{% block tab_list %}
+    <li class="tab active"><a href="{% url 'mainapp:personal_account_page' %}" class="tab-link">Профиль</a></li>
+    <li class="tab"><a href="{% url 'mainapp:favorites' %}" class="tab-link">Избранное</a></li>
+    <li class="tab"><a href="#" class="tab-link">Мои бронирования</a></li>
+{% endblock tab_list %}
 
 {% block main_content %}
     <p><input type="text" name="username" readonly placeholder="{{user.username}}" id="id_username"></p>

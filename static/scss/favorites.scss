@@ -1,0 +1,91 @@
+.main_content {
+    .cards {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 47px;
+            .tour-img {
+                border-radius: 10px 0px 0px 10px;
+                overflow: hidden;
+            }
+            .tour_card-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 27px 0;
+                width: 451px;
+                .name {
+                    .type {
+                        font-size: 12px;
+                        color: #ffc700;
+                    }
+                    font-family: "Montserrat-Bold";
+                    font-size: 18px;
+                }
+                .tour-info {
+                    display: flex;
+                    font-family: "Montserrat-Bold";
+                    font-size: 18px;
+                    gap: 10px;
+                    color: #0499dd;
+                    p {
+                        color: #000;
+                        font-size: 12px;
+                        font-family: "Montserrat-Medium";
+                    }
+                    .duration {
+                        margin-left: 40px;
+                    }
+                }
+                .description {
+                    padding-left: 20px;
+                    border-left: #0499dd solid 3px;
+                }
+                .tour_bottons {
+                    display: flex;
+                    .tour_more {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 160px;
+                        height: 40px;
+                        padding: 0;
+                        background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+                        border-radius: 40px;
+                        border: none;
+                        color: #fff;
+                        font-size: 14px;
+                        font-family: "Montserrat-Bold";
+                    }
+                    .add_to_favorites_form {
+                        margin-left: 10px;
+                        #add_to_favorites {
+                            display: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                        }
+                        .add_to_favorites_label {
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            background-image: url("../img/add_to_fav.svg");
+                            border: none;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            color: #000000;
+                        }
+                        .label_checked {
+                            background-image: url("../img/added_to_fav.svg");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

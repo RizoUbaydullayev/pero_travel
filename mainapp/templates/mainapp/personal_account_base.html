@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block links %} 
-<link rel="stylesheet" href="{% static 'css/personal_account.css'%}">
+<link rel="stylesheet" href="{% static 'css/personal_account_base.css'%}">
 {% endblock links %}
 {% block content %}
 <header class="header">
@@ -33,9 +33,10 @@
 <section class="main container">
         <nav class="tabs">
             <ul class="tab_list">
-                <li class="tab active"><a href="#" class="tab-link">Профиль</a></li>
-                <li class="tab"><a href="#" class="tab-link">Избранное</a></li>
-                <li class="tab"><a href="#" class="tab-link">Мои бронирования</a></li>
+                {% block tab_list %}
+                
+                {% endblock tab_list %}
+                
             </ul>
         </nav>
         <div class="main_content">

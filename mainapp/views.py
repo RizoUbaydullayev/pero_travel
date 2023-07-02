@@ -22,3 +22,5 @@ class TourOverviewPageView(TemplateView):
 class PersonalAccountPageView(TemplateView):
     template_name = 'mainapp/personal_account.html'
  
+class FavoritesPageView(TemplateView):
+    template_name = 'mainapp/favorites.html'

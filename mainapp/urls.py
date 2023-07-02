@@ -10,4 +10,6 @@ urlpatterns = [
     path("excursions/", views.ExcursionsPageView.as_view(), name="excursions_page"),
     path("tour_overview/", views.TourOverviewPageView.as_view(), name="tour_overview_page"),
     path("personal_account/", views.PersonalAccountPageView.as_view(), name="personal_account_page"),
+    path("personal_account/favorites/", views.FavoritesPageView.as_view(), name="favorites"),
+
 ]
