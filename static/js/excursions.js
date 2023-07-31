@@ -46,13 +46,32 @@ bigFilterDataValue = new AirDatepicker('.big_filter_data_value', {
 
 
 
-addToFavoritesBtn = document.querySelector("#add_to_favorites");
-addToFavoritesBtnLabels = document.querySelectorAll(".add_to_favorites_label");
-addToFavoritesBtnLabels.forEach(label => {
-    label.addEventListener("click", (event) => {
-        event.target.classList.toggle("label_checked");
-    })
-})
+// =============== кнопка добавления в избранное =================================
+$(document).ready(function () {
+    let = addToFavoritesBtnLabels = $('.add_to_favorites_label')
+    addToFavoritesBtnLabels.each(function () {
+        let element = $(this);
+        element.click(function () {
+
+            if (element.hasClass('label_checked')) {
+                ajax_url = `/tours/${element.data('tour_id')}/remove_from_favorites`
+            }
+            else {
+                ajax_url = `/tours/${element.data('tour_id')}/add_to_favorites`
+            }
+            $.ajax({
+                url: ajax_url,
+                success: function (response) {
+                    // Обработка успешного ответа
+                    element.toggleClass("label_checked");
+                    console.log(response);
+                }
+            });
+        })
+    });
+});
+
+
 
 
 

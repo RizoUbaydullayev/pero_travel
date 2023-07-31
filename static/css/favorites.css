@@ -76,17 +76,17 @@
   font-family: "Montserrat-Bold";
 }
 
-.main_content .cards .card .tour_card-inner .tour_bottons .add_to_favorites_form {
+.main_content .cards .card .tour_card-inner .tour_bottons .favorites_btns {
   margin-left: 10px;
 }
 
-.main_content .cards .card .tour_card-inner .tour_bottons .add_to_favorites_form #add_to_favorites {
+.main_content .cards .card .tour_card-inner .tour_bottons .favorites_btns #add_to_favorites {
   display: none;
   appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.main_content .cards .card .tour_card-inner .tour_bottons .add_to_favorites_form .add_to_favorites_label {
+.main_content .cards .card .tour_card-inner .tour_bottons .favorites_btns .add_to_favorites_label {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -97,7 +97,7 @@
   color: #000000;
 }
 
-.main_content .cards .card .tour_card-inner .tour_bottons .add_to_favorites_form .label_checked {
+.main_content .cards .card .tour_card-inner .tour_bottons .favorites_btns .label_checked {
   background-image: url("../img/added_to_fav.svg");
 }
 /*# sourceMappingURL=favorites.css.map */

@@ -1,6 +1,7 @@
 {% extends 'mainapp/personal_account_base.html' %}
 {% load static %}
 {% block links %} 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="{% static 'css/personal_account_base.css'%}">
 <link rel="stylesheet" href="{% static 'css/favorites.css'%}">
 {% endblock links %}
@@ -13,6 +14,7 @@
 
 {% block main_content %}
 <div class="cards">
+    {% for tour in favorite_tours %}
     <div class="card">
         <div class="tour-img">
             <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
@@ -20,83 +22,43 @@
         <div class="tour_card-inner">
             <h4 class="name">
                 <p class="type">
-                    Автобусный тур
+                {{tour.type}}
                 </p>
-                Золотое кольцо Абхазии (из Адлера)
+                {{tour.name}}
             </h4>
             <div class="tour-info">
                 <div class="price-adult_ticket">
-                    1 618 ₽
+                    {{tour.adult_ticket}} ₽
                     <p>Взрослый билет</p>
                 </div>
                 <div class="price-child_ticket">
-                    1 412 ₽
+                    {{tour.child_ticket}} ₽
                     <p>Детский билет</p>
                 </div>
                 <div class="duration">
-                    2,5 часа
+                    {{tour.duration}} часа
                 </div>
             </div>
             <div class="description">
-                Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
-                маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
-                вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
+                {{tour.description}}
+                {{tour.id}}
             </div>
             <div class="tour_bottons">
                 <a href="#" class="tour_more">Подробнее</a>
-                <form class="add_to_favorites_form" action="#">
+                <div class="favorites_btns">
                     <input id="add_to_favorites" type="checkbox">
                     </input>
-                    <label class="add_to_favorites_label" for="add_to_favorites"></label>
-                </form>
-
+                    <label class="add_to_favorites_label label_checked" for="add_to_favorites" data-tour_id = '{{tour.id}}'></label>
+                </div> 
             </div>
         </div>
     </div>
-    <div class="card">
-        <div class="tour-img">
-            <img src="{% static '/img/our_tours-card_img.png' %}" alt="card_img">
-        </div>
-        <div class="tour_card-inner">
-            <h4 class="name">
-                <p class="type">
-                    Автобусный тур
-                </p>
-                Золотое кольцо Абхазии (из Адлера)
-            </h4>
-            <div class="tour-info">
-                <div class="price-adult_ticket">
-                    1 618 ₽
-                    <p>Взрослый билет</p>
-                </div>
-                <div class="price-child_ticket">
-                    1 412 ₽
-                    <p>Детский билет</p>
-                </div>
-                <div class="duration">
-                    2,5 часа
-                </div>
-            </div>
-            <div class="description">
-                Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По
-                маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с
-                вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок...
-            </div>
-            <div class="tour_bottons">
-                <a href="#" class="tour_more">Подробнее</a>
-                <form class="add_to_favorites_form" action="#">
-                    <input id="add_to_favorites" type="checkbox">
-                    </input>
-                    <label class="add_to_favorites_label" for="add_to_favorites"></label>
-                </form>
-
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock main_content %}
 
 {% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'js/favorites.js' %}"></script>
 {% endblock scripts %}
 

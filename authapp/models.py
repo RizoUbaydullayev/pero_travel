@@ -4,6 +4,7 @@ from django.contrib.auth.models import PermissionsMixin, UserManager
 from django.contrib.auth.validators import ASCIIUsernameValidator
 from django.utils.translation import gettext_lazy as _
 
+from mainapp.models import Tour
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     username_validator = ASCIIUsernameValidator()
@@ -46,6 +47,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
             Unselect this instead of deleting accounts."
         ),
     )
+    favorite_tours = models.ManyToManyField(Tour, blank=True)
 
     objects = UserManager()
     EMAIL_FIELD = "email"

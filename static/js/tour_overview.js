@@ -130,7 +130,7 @@ function adaptive(width) {
 		reviews_slider.params.slidesPerView = 2;
 	}
 
-	if (width >= 1024 && width < 1280) {
+	if (width >= 1024 && width < 1280) {	
 		routeDescriptionSlider.params.slidesPerView = 1.5;
 		reviews_slider.params.slidesPerView = 1.5;
 	}
